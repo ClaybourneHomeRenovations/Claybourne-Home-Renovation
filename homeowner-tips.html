@@ -1,0 +1,753 @@
+<!-- SAVE AS: homeowner-tips.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Homeowner Tips | Claybourne Home Renovations</title>
+<meta name="application-name" content="Claybourne Home Renovation">
+<meta name="apple-mobile-web-app-title" content="Claybourne Home Renovation">
+<meta property="og:site_name" content="Claybourne Home Renovation">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --cream:#f8f3ec;
+    --soft-cream:#fbf7f1;
+    --taupe:#b48a68;
+    --taupe-dark:#8d684e;
+    --brown:#302720;
+    --muted:#6d6258;
+    --line:#e4d8cb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter", sans-serif;
+    background:var(--cream);
+    color:var(--brown);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.header{
+    height:108px;
+    padding:0 7.5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(250,246,240,0.96);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+}
+
+.logo{
+    font-family:"Cormorant Garamond", serif;
+    color:#9a7058;
+    letter-spacing:7px;
+    font-size:46px;
+    line-height:.75;
+}
+
+.logo span{
+    display:block;
+    font-family:"Inter", sans-serif;
+    letter-spacing:5px;
+    font-size:10px;
+    margin-top:14px;
+    color:#8a7467;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+.nav a{
+    padding-bottom:7px;
+    border-bottom:2px solid transparent;
+}
+
+.nav a.active,
+.nav a:hover{
+    color:var(--taupe-dark);
+    border-bottom-color:var(--taupe);
+}
+
+.quote-btn{
+    display:inline-block;
+    background:var(--taupe);
+    color:white;
+    padding:17px 31px;
+    border-radius:3px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.outline-btn{
+    display:inline-block;
+    border:1px solid var(--taupe);
+    color:var(--taupe-dark);
+    padding:16px 32px;
+    border-radius:3px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.hero{
+    min-height:650px;
+    display:grid;
+    grid-template-columns:47% 53%;
+    background:
+        linear-gradient(90deg, rgba(249,244,237,1) 0%, rgba(249,244,237,.94) 35%, rgba(249,244,237,.12) 58%),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1800&auto=format&fit=crop") center right/cover no-repeat;
+}
+
+.hero-copy{
+    padding-left:7.5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:620px;
+}
+
+.eyebrow{
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:1.6px;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond", serif;
+    font-size:78px;
+    line-height:.95;
+    font-weight:500;
+    margin-bottom:30px;
+}
+
+.hero h1 em{
+    font-style:italic;
+    font-weight:400;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.75;
+    color:#4c443d;
+    max-width:460px;
+    margin-bottom:32px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.section{
+    padding:82px 7.5%;
+}
+
+.soft{
+    background:var(--soft-cream);
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:58px;
+    align-items:center;
+}
+
+.section-img{
+    width:100%;
+    height:560px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+.content h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:54px;
+    line-height:1.02;
+    font-weight:500;
+    margin-bottom:22px;
+}
+
+.content p{
+    color:#5e554e;
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.tip-box{
+    background:#efe4d9;
+    border-left:4px solid var(--taupe);
+    padding:30px;
+    margin-top:30px;
+}
+
+.tip-box h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.tip-box p{
+    color:#62584f;
+    line-height:1.8;
+}
+
+.section-title{
+    max-width:780px;
+    text-align:center;
+    margin:0 auto 58px;
+}
+
+.section-title h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:52px;
+    font-weight:500;
+    margin-bottom:16px;
+}
+
+.section-title p{
+    color:var(--muted);
+    line-height:1.85;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.card{
+    background:#fffaf4;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px;
+}
+
+.card h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:36px;
+    font-weight:500;
+    margin-bottom:14px;
+}
+
+.card p{
+    color:#62584f;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.steps-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.step{
+    background:#fffaf4;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px 28px;
+}
+
+.step-number{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:1.5px solid var(--taupe);
+    color:var(--taupe-dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:"Cormorant Garamond", serif;
+    font-size:32px;
+    margin-bottom:22px;
+}
+
+.step h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.step p{
+    color:#62584f;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.final-cta{
+    padding:34px 7.5%;
+    background:#eaded2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.final-cta h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:36px;
+    font-weight:500;
+}
+
+.final-cta p{
+    color:#685d54;
+    font-size:14px;
+    margin-top:4px;
+}
+
+.footer{
+    padding:34px 7.5%;
+    background:#ded0c2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#5c5149;
+    font-size:13px;
+}
+
+@media(max-width:1050px){
+    .nav{
+        display:none;
+    }
+
+    .hero,
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+
+    .card-grid,
+    .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .header{
+        height:auto;
+        flex-direction:column;
+        gap:18px;
+        padding:22px 6%;
+    }
+
+    .hero-copy{
+        padding:70px 6%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .card-grid,
+    .steps-grid{
+        grid-template-columns:1fr;
+    }
+
+    .content h2,
+    .section-title h2{
+        font-size:42px;
+    }
+
+    .final-cta,
+    .footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+
+
+/* Mobile hamburger menu */
+.mobile-menu-toggle{
+    display:none;
+    width:46px;
+    height:46px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fffaf4;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:6px;
+    z-index:80;
+}
+
+.mobile-menu-toggle span{
+    width:23px;
+    height:2px;
+    background:var(--brown);
+    transition:.25s ease;
+}
+
+.mobile-menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.mobile-menu-toggle.open span:nth-child(2){opacity:0;}
+.mobile-menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+.mobile-nav{display:none;}
+
+@media(max-width:1050px){
+    .mobile-menu-toggle{display:flex;}
+    .header{position:sticky;}
+    .header > .quote-btn{display:none;}
+    .mobile-nav{
+        display:none;
+        position:absolute;
+        top:108px;
+        left:0;
+        right:0;
+        background:rgba(250,246,240,.98);
+        border-top:1px solid var(--line);
+        border-bottom:1px solid var(--line);
+        padding:18px 7.5% 22px;
+        box-shadow:0 18px 40px rgba(48,39,32,.08);
+        z-index:70;
+    }
+    .mobile-nav.open{display:grid;gap:8px;}
+    .mobile-nav a{
+        display:block;
+        padding:13px 0;
+        border-bottom:1px solid rgba(228,216,203,.75);
+        text-transform:uppercase;
+        font-size:12px;
+        letter-spacing:.8px;
+        font-weight:700;
+        color:#4e463f;
+    }
+    .mobile-nav a:last-child{border-bottom:0;}
+    .mobile-nav a.active,.mobile-nav a:hover{color:var(--taupe-dark);}
+}
+
+@media(max-width:700px){
+    .mobile-nav{top:92px;padding-left:6%;padding-right:6%;}
+}
+
+
+@media(max-width:700px){
+    .logo{font-size:36px;letter-spacing:4px;}
+    .logo span{letter-spacing:2.5px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        CLAYBOURNE
+        <span>HOME RENOVATIONS</span>
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+<a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="quote-btn">
+        Free Estimate
+    </a>
+
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+<a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+            Homeowner Tips
+        </div>
+
+        <h1>
+            Simple tips to help you renovate
+            <em>with confidence.</em>
+        </h1>
+
+        <p>
+            Renovations can feel overwhelming, especially when you are trying
+            to balance style, budget, timeline, and trust. These tips help you
+            plan smarter before any work begins.
+        </p>
+
+        <div class="hero-actions">
+            <a href="contact.html" class="quote-btn">
+                Ask A Question
+            </a>
+
+            <a href="resources.html" class="outline-btn">
+                Back To Resources
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section soft">
+
+    <div class="grid-2">
+
+        <img
+            class="section-img"
+            src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1400&auto=format&fit=crop"
+            alt="Modern home renovation planning"
+        >
+
+        <div class="content">
+
+            <div class="eyebrow">
+                Before You Start
+            </div>
+
+            <h2>
+                Good renovations start before the tools come out.
+            </h2>
+
+            <p>
+                One of the best things a homeowner can do is slow down before
+                starting. The more clearly you understand your priorities,
+                budget, and must-haves, the smoother the renovation process
+                becomes.
+            </p>
+
+            <p>
+                Before hiring anyone, think about how you use the space,
+                what is frustrating you now, and what changes would make
+                the biggest difference in your everyday life.
+            </p>
+
+            <p>
+                A renovation should not just look good in photos. It should
+                make your home more comfortable, practical, and enjoyable.
+            </p>
+
+            <div class="tip-box">
+                <h3>Homeowner tip:</h3>
+                <p>
+                    Do not start with Pinterest alone. Start with your real
+                    needs first, then use inspiration photos to guide the look.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-title">
+        <div class="eyebrow">
+            Common Mistakes
+        </div>
+
+        <h2>
+            Avoid these renovation mistakes.
+        </h2>
+
+        <p>
+            Most renovation stress comes from unclear expectations, rushed
+            decisions, or underestimating the small details that affect cost
+            and timing.
+        </p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Choosing Only By Price</h3>
+            <p>
+                The cheapest quote is not always the best value.
+                Look for clear communication, realistic timelines,
+                and workmanship you can trust.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Skipping The Details</h3>
+            <p>
+                Fixtures, trim, hardware, grout colour, transitions,
+                and finishing touches can make a big difference
+                in the final look.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>No Flexibility</h3>
+            <p>
+                Older homes can hide surprises. Leaving room in your budget
+                and timeline helps reduce stress if unexpected issues appear.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section soft">
+
+    <div class="section-title">
+        <div class="eyebrow">
+            Smart Planning Steps
+        </div>
+
+        <h2>
+            How to prepare like a confident homeowner.
+        </h2>
+    </div>
+
+    <div class="steps-grid">
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Define The Goal</h3>
+            <p>
+                Decide whether the project is about function,
+                style, comfort, resale value, or all of the above.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Set Your Budget</h3>
+            <p>
+                Know your comfortable range before selecting materials
+                or expanding the scope of work.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Prioritize Needs</h3>
+            <p>
+                Separate must-haves from nice-to-haves so the most
+                important upgrades come first.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Ask Questions</h3>
+            <p>
+                A trustworthy contractor should explain the process,
+                pricing, timeline, and possible challenges clearly.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-cta">
+
+    <div>
+        <h2>Need help planning your renovation?</h2>
+        <p>
+            We’ll help you understand your options and make confident
+            decisions before the project begins.
+        </p>
+    </div>
+
+    <a href="contact.html" class="quote-btn">
+        Contact Claybourne
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <div class="logo">
+        CLAYBOURNE
+        <span>HOME RENOVATIONS</span>
+    </div>
+
+    <div>
+        © 2026 Claybourne Home Renovations.
+        All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+<script>
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+if (mobileMenuToggle && mobileNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        mobileMenuToggle.classList.toggle('open', isOpen);
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileMenuToggle.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+</script>
+
+</body>
+</html>

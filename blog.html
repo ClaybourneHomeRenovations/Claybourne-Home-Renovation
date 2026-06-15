@@ -1,0 +1,878 @@
+<!-- SAVE AS: blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Renovation Blog | Claybourne Home Renovations</title>
+<meta name="description" content="Practical Claybourne Home Renovations blog articles answering common homeowner searches about kitchen remodel costs, bathroom renovations, basement finishing, contractor questions, renovation timelines, and budgeting.">
+<meta name="application-name" content="Claybourne Home Renovation">
+<meta name="apple-mobile-web-app-title" content="Claybourne Home Renovation">
+<meta property="og:site_name" content="Claybourne Home Renovation">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --cream:#f8f3ec;
+    --soft-cream:#fbf7f1;
+    --sand:#efe5da;
+    --taupe:#b48a68;
+    --taupe-dark:#8d684e;
+    --brown:#302720;
+    --muted:#6d6258;
+    --line:#e4d8cb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter", sans-serif;
+    background:var(--cream);
+    color:var(--brown);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.header{
+    height:108px;
+    padding:0 7.5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(250,246,240,0.96);
+    border-bottom:1px solid rgba(228,216,203,0.8);
+    position:sticky;
+    top:0;
+    z-index:50;
+}
+
+.logo{
+    font-family:"Cormorant Garamond", serif;
+    color:#9a7058;
+    letter-spacing:7px;
+    font-size:46px;
+    line-height:0.75;
+    font-weight:500;
+}
+
+.logo span{
+    display:block;
+    font-family:"Inter", sans-serif;
+    letter-spacing:5px;
+    font-size:10px;
+    margin-top:14px;
+    color:#8a7467;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+    color:#4e463f;
+}
+
+.nav a{
+    padding-bottom:7px;
+    border-bottom:2px solid transparent;
+}
+
+.nav a.active,
+.nav a:hover{
+    color:var(--taupe-dark);
+    border-bottom-color:var(--taupe);
+}
+
+.quote-btn{
+    display:inline-block;
+    background:var(--taupe);
+    color:white;
+    padding:17px 31px;
+    border-radius:3px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.outline-btn{
+    display:inline-block;
+    border:1px solid var(--taupe);
+    color:var(--taupe-dark);
+    padding:16px 32px;
+    border-radius:3px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.blog-hero{
+    min-height:650px;
+    display:grid;
+    grid-template-columns:47% 53%;
+    background:
+      linear-gradient(90deg, rgba(249,244,237,1) 0%, rgba(249,244,237,.94) 35%, rgba(249,244,237,.12) 58%),
+      url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1800&auto=format&fit=crop") center right/cover no-repeat;
+}
+
+.hero-copy{
+    padding-left:7.5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:620px;
+}
+
+.eyebrow{
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:1.6px;
+    font-weight:700;
+    margin-bottom:22px;
+    color:#332b25;
+}
+
+.blog-hero h1{
+    font-family:"Cormorant Garamond", serif;
+    font-size:78px;
+    line-height:.95;
+    font-weight:500;
+    letter-spacing:-1.5px;
+    margin-bottom:30px;
+}
+
+.blog-hero h1 em{
+    font-style:italic;
+    font-weight:400;
+}
+
+.blog-hero p{
+    font-size:17px;
+    line-height:1.75;
+    color:#4c443d;
+    max-width:470px;
+    margin-bottom:32px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.blog-section{
+    padding:82px 7.5%;
+    background:#fbf7f1;
+}
+
+.section-title{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 58px;
+}
+
+.section-title h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:52px;
+    line-height:1.02;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.section-title p{
+    color:var(--muted);
+    line-height:1.8;
+    font-size:15px;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.blog-card{
+    background:#fffaf4;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    transition:.3s ease;
+}
+
+.blog-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 45px rgba(48,39,32,.08);
+}
+
+.blog-card img{
+    height:260px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:30px;
+}
+
+.blog-category{
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:1.5px;
+    color:var(--taupe-dark);
+    margin-bottom:14px;
+    font-weight:700;
+}
+
+.blog-content h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:38px;
+    line-height:1.05;
+    margin-bottom:16px;
+    font-weight:500;
+}
+
+.blog-content p{
+    color:#62584f;
+    line-height:1.8;
+    font-size:14px;
+    margin-bottom:24px;
+}
+
+.learn-link{
+    color:var(--taupe-dark);
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:1.2px;
+    font-weight:700;
+}
+
+.guide-section{
+    padding:82px 7.5%;
+    background:#f8f3ec;
+}
+
+.guide-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:58px;
+    align-items:center;
+}
+
+.guide-image{
+    height:580px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+.guide-copy h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:54px;
+    line-height:1.02;
+    margin-bottom:24px;
+    font-weight:500;
+}
+
+.guide-copy p{
+    color:#5e554e;
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.tip-box{
+    margin-top:28px;
+    padding:28px;
+    background:#efe4d9;
+    border-left:4px solid var(--taupe);
+}
+
+.tip-box h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.tip-box p{
+    margin:0;
+}
+
+.questions-section{
+    padding:82px 7.5%;
+    background:#fbf7f1;
+}
+
+.questions-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.question-card{
+    background:#fffaf4;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px;
+}
+
+.question-card h3{
+    font-family:"Cormorant Garamond", serif;
+    font-size:34px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.question-card p{
+    color:#62584f;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.final-cta{
+    padding:34px 7.5%;
+    background:#eaded2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.final-cta h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:36px;
+    font-weight:500;
+}
+
+.final-cta p{
+    color:#685d54;
+    font-size:14px;
+    margin-top:4px;
+}
+
+.footer{
+    padding:34px 7.5%;
+    background:#ded0c2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#5c5149;
+    font-size:13px;
+}
+
+@media(max-width:1050px){
+    .nav{
+        display:none;
+    }
+
+    .blog-hero{
+        grid-template-columns:1fr;
+        background:
+          linear-gradient(90deg, rgba(249,244,237,.96), rgba(249,244,237,.55)),
+          url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1800&auto=format&fit=crop") center/cover no-repeat;
+    }
+
+    .blog-grid,
+    .guide-grid,
+    .questions-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .header{
+        height:auto;
+        gap:18px;
+        flex-direction:column;
+        padding:22px 6%;
+    }
+
+    .logo{
+        font-size:36px;
+        letter-spacing:4px;
+    }
+
+    .logo span{
+        letter-spacing:2.5px;
+    }
+
+    .blog-hero{
+        min-height:590px;
+    }
+
+    .hero-copy{
+        padding:70px 6%;
+    }
+
+    .blog-hero h1{
+        font-size:52px;
+    }
+
+    .blog-grid,
+    .guide-grid,
+    .questions-grid{
+        grid-template-columns:1fr;
+    }
+
+    .guide-copy h2,
+    .section-title h2{
+        font-size:42px;
+    }
+
+    .final-cta,
+    .footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+/* Mobile hamburger menu */
+.mobile-menu-toggle{
+    display:none;
+    width:46px;
+    height:46px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fffaf4;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:6px;
+    z-index:80;
+}
+
+.mobile-menu-toggle span{
+    width:23px;
+    height:2px;
+    background:var(--brown);
+    transition:.25s ease;
+}
+
+.mobile-menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.mobile-menu-toggle.open span:nth-child(2){opacity:0;}
+.mobile-menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+.mobile-nav{display:none;}
+
+@media(max-width:1050px){
+    .mobile-menu-toggle{display:flex;}
+    .header{position:sticky;}
+    .header > .quote-btn{display:none;}
+    .mobile-nav{
+        display:none;
+        position:absolute;
+        top:108px;
+        left:0;
+        right:0;
+        background:rgba(250,246,240,.98);
+        border-top:1px solid var(--line);
+        border-bottom:1px solid var(--line);
+        padding:18px 7.5% 22px;
+        box-shadow:0 18px 40px rgba(48,39,32,.08);
+        z-index:70;
+    }
+    .mobile-nav.open{display:grid;gap:8px;}
+    .mobile-nav a{
+        display:block;
+        padding:13px 0;
+        border-bottom:1px solid rgba(228,216,203,.75);
+        text-transform:uppercase;
+        font-size:12px;
+        letter-spacing:.8px;
+        font-weight:700;
+        color:#4e463f;
+    }
+    .mobile-nav a:last-child{border-bottom:0;}
+    .mobile-nav a.active,.mobile-nav a:hover{color:var(--taupe-dark);}
+}
+
+@media(max-width:700px){
+    .mobile-nav{top:92px;padding-left:6%;padding-right:6%;}
+}
+
+@media(max-width:700px){
+    .logo{font-size:36px;letter-spacing:4px;}
+    .logo span{letter-spacing:2.5px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        CLAYBOURNE
+        <span>HOME RENOVATIONS</span>
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="quote-btn">
+        Free Estimate
+    </a>
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<section class="blog-hero">
+
+    <div class="hero-copy">
+
+        <div class="eyebrow">
+            Renovation Blog
+        </div>
+
+        <h1>
+            Helpful answers for homeowners
+            <em>planning their next renovation.</em>
+        </h1>
+
+        <p>
+            From kitchen remodel costs to bathroom timelines and contractor
+            questions, these articles answer the searches homeowners make
+            before they are ready to request an estimate.
+        </p>
+
+        <div class="hero-actions">
+            <a href="contact.html" class="quote-btn">
+                Ask A Question
+            </a>
+
+            <a href="services.html" class="outline-btn">
+                View Services
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="blog-section">
+
+    <div class="section-title">
+        <div class="eyebrow">
+            Featured Articles
+        </div>
+
+        <h2>
+            Renovation guidance written for real decisions.
+        </h2>
+
+        <p>
+            Each article is built around questions homeowners commonly search
+            while also pointing them toward the Claybourne services that can
+            help bring the project to life.
+        </p>
+    </div>
+
+    <div class="blog-grid">
+
+        <article class="blog-card" id="kitchen-remodel-cost">
+            <img
+                src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=1200&auto=format&fit=crop"
+                alt="Modern kitchen remodel with white cabinetry"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Kitchen Renovations
+                </div>
+
+                <h3>
+                    How much does a kitchen remodel cost?
+                </h3>
+
+                <p>
+                    Learn what affects kitchen renovation pricing, including
+                    cabinetry, counters, flooring, lighting, appliance changes,
+                    layout adjustments, and finish selections.
+                </p>
+
+                <a class="learn-link" href="kitchen-remodel-cost.html">Read The Guide</a>
+            </div>
+        </article>
+
+        <article class="blog-card" id="bathroom-renovation-ideas">
+            <img
+                src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1200&auto=format&fit=crop"
+                alt="Renovated bathroom with tile shower"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Bathroom Remodeling
+                </div>
+
+                <h3>
+                    Bathroom renovation ideas for small spaces.
+                </h3>
+
+                <p>
+                    Explore walk-in showers, brighter tile, better vanities,
+                    recessed storage, lighting upgrades, and layout choices
+                    that make small bathrooms feel more comfortable.
+                </p>
+
+                <a class="learn-link" href="bathroom-renovation-ideas.html">Read The Guide</a>
+            </div>
+        </article>
+
+        <article class="blog-card" id="basement-finishing">
+            <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
+                alt="Finished basement family room"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Basement Finishing
+                </div>
+
+                <h3>
+                    What to know before finishing a basement.
+                </h3>
+
+                <p>
+                    Understand moisture control, insulation, ceiling height,
+                    lighting, flooring, egress, permits, and layout planning
+                    before turning unused space into livable space.
+                </p>
+
+                <a class="learn-link" href="basement-finishing-guide.html">Read The Guide</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <img
+                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1200&auto=format&fit=crop"
+                alt="Bright renovated home interior with warm finishes"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Renovation Timeline
+                </div>
+
+                <h3>
+                    How long does a home renovation take?
+                </h3>
+
+                <p>
+                    A realistic renovation timeline depends on design choices,
+                    permits, material lead times, demolition, trade scheduling,
+                    inspections, finishing work, and the condition of the home.
+                </p>
+
+                <a class="learn-link" href="home-renovation-timeline.html">Read The Guide</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
+                alt="Renovated home living area with warm natural light"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Budget Planning
+                </div>
+
+                <h3>
+                    How to plan a realistic renovation budget.
+                </h3>
+
+                <p>
+                    Learn how to think through priorities, material choices,
+                    hidden conditions, contingency, and the difference between
+                    what looks simple and what affects the final project cost.
+                </p>
+
+                <a class="learn-link" href="renovation-budget-planning.html">Read The Guide</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop"
+                alt="Finished home renovation with open living space"
+            >
+
+            <div class="blog-content">
+                <div class="blog-category">
+                    Hiring A Contractor
+                </div>
+
+                <h3>
+                    How to choose the right renovation contractor.
+                </h3>
+
+                <p>
+                    Choosing a contractor is about more than comparing prices.
+                    The right fit should offer clear communication, realistic
+                    expectations, careful planning, and a process you can trust.
+                </p>
+
+                <a class="learn-link" href="choosing-renovation-contractor.html">Read The Guide</a>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="questions-section">
+
+    <div class="section-title">
+        <div class="eyebrow">
+            Where To Start
+        </div>
+
+        <h2>
+            Use the blog to move from inspiration to a clearer plan.
+        </h2>
+    </div>
+
+    <div class="questions-grid">
+        <div class="question-card">
+            <h3>Start With The Room</h3>
+            <p>
+                If you already know the kitchen, bathroom, basement, or living
+                area that needs attention, begin with the guide for that space.
+                The articles explain the decisions that usually shape cost,
+                timing, materials, and the finished feel of the renovation.
+            </p>
+        </div>
+
+        <div class="question-card">
+            <h3>Then Think About Scope</h3>
+            <p>
+                A cosmetic update, a partial remodel, and a full renovation
+                are very different projects. Reading through the blog helps
+                homeowners understand what might be involved before they start
+                comparing estimates or choosing finishes.
+            </p>
+        </div>
+
+        <div class="question-card">
+            <h3>Use The Articles To Prepare</h3>
+            <p>
+                The more clearly you can describe what you want to improve,
+                the more useful the first renovation conversation becomes.
+                These guides are designed to help you name your priorities,
+                concerns, and must-haves in plain language.
+            </p>
+        </div>
+
+        <div class="question-card">
+            <h3>Bring Claybourne In Early</h3>
+            <p>
+                Once you have a sense of the space, budget range, and outcome
+                you want, Claybourne can help turn that research into a more
+                practical plan. Early guidance can prevent missed details and
+                make the next step feel much less uncertain.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="final-cta">
+
+    <div>
+        <h2>Ready to turn research into a renovation plan?</h2>
+        <p>
+            Tell us what you want to change and we’ll help you understand
+            your options, budget, and next steps.
+        </p>
+    </div>
+
+    <a href="contact.html" class="quote-btn">
+        Contact Claybourne
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <div class="logo">
+        CLAYBOURNE
+        <span>HOME RENOVATIONS</span>
+    </div>
+
+    <div>
+        © 2026 Claybourne Home Renovations.
+        All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+if (mobileMenuToggle && mobileNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        mobileMenuToggle.classList.toggle('open', isOpen);
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileMenuToggle.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+</script>
+
+</body>
+</html>

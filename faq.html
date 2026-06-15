@@ -1,0 +1,181 @@
+<!-- SAVE AS: faq.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ | Claybourne Home Renovations</title>
+<meta name="description" content="Frequently asked questions from Claybourne Home Renovations about estimates, permits, payment schedules, cleanup, living through renovations, materials, communication, and preparing for a home renovation.">
+<meta name="application-name" content="Claybourne Home Renovation">
+<meta name="apple-mobile-web-app-title" content="Claybourne Home Renovation">
+<meta property="og:site_name" content="Claybourne Home Renovation">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f3ec;--soft-cream:#fbf7f1;--taupe:#b48a68;--taupe-dark:#8d684e;--brown:#302720;--muted:#6d6258;--line:#e4d8cb;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Inter",sans-serif;background:var(--cream);color:var(--brown);}
+a{text-decoration:none;color:inherit;}
+.header{height:108px;padding:0 7.5%;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,240,.96);border-bottom:1px solid rgba(228,216,203,.8);position:sticky;top:0;z-index:50;}
+.logo{font-family:"Cormorant Garamond",serif;color:#9a7058;letter-spacing:7px;font-size:46px;line-height:.75;font-weight:500;}
+.logo span{display:block;font-family:"Inter",sans-serif;letter-spacing:5px;font-size:10px;margin-top:14px;color:#8a7467;}
+.nav{display:flex;gap:30px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.7px;color:#4e463f;}
+.nav a{padding-bottom:7px;border-bottom:2px solid transparent;}
+.nav a.active,.nav a:hover{color:var(--taupe-dark);border-bottom-color:var(--taupe);}
+.quote-btn{display:inline-block;background:var(--taupe);color:white;padding:17px 31px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;}
+.outline-btn{display:inline-block;border:1px solid var(--taupe);color:var(--taupe-dark);padding:16px 32px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;}
+.faq-hero{min-height:620px;display:grid;grid-template-columns:47% 53%;background:linear-gradient(90deg,rgba(249,244,237,1) 0%,rgba(249,244,237,.94) 35%,rgba(249,244,237,.12) 58%),url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1800&auto=format&fit=crop") center right/cover no-repeat;}
+.hero-copy{padding-left:7.5vw;display:flex;flex-direction:column;justify-content:center;max-width:640px;}
+.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:1.6px;font-weight:700;margin-bottom:22px;color:#332b25;}
+.faq-hero h1{font-family:"Cormorant Garamond",serif;font-size:78px;line-height:.95;font-weight:500;letter-spacing:-1.5px;margin-bottom:30px;}
+.faq-hero h1 em{font-style:italic;font-weight:400;}
+.faq-hero p{font-size:17px;line-height:1.75;color:#4c443d;max-width:500px;margin-bottom:32px;}
+.faq-section{padding:82px 7.5%;background:#fbf7f1;}
+.section-title{text-align:center;max-width:780px;margin:0 auto 58px;}
+.section-title h2{font-family:"Cormorant Garamond",serif;font-size:52px;line-height:1.02;font-weight:500;margin-bottom:18px;}
+.section-title p{color:var(--muted);line-height:1.85;}
+.faq-layout{display:grid;grid-template-columns:.34fr .66fr;gap:42px;align-items:start;}
+.faq-sidebar{position:sticky;top:138px;background:#efe4d9;border-radius:6px;padding:34px;}
+.faq-sidebar h3{font-family:"Cormorant Garamond",serif;font-size:36px;font-weight:500;margin-bottom:14px;}
+.faq-sidebar p{color:#5e554e;line-height:1.8;font-size:14px;margin-bottom:22px;}
+.faq-group{margin-bottom:42px;}
+.faq-group:last-child{margin-bottom:0;}
+.faq-group-title{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:500;margin-bottom:18px;}
+.faq-item{background:#fffaf4;border:1px solid var(--line);border-radius:6px;margin-bottom:14px;overflow:hidden;}
+.faq-item summary{cursor:pointer;list-style:none;padding:24px 28px;font-family:"Cormorant Garamond",serif;font-size:28px;line-height:1.1;font-weight:500;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item p{color:#62584f;line-height:1.85;font-size:15px;padding:0 28px 26px;}
+.final-cta{padding:34px 7.5%;background:#eaded2;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.final-cta h2{font-family:"Cormorant Garamond",serif;font-size:36px;font-weight:500;}
+.final-cta p{color:#685d54;font-size:14px;margin-top:4px;}
+.footer{padding:34px 7.5%;background:#ded0c2;display:flex;justify-content:space-between;align-items:center;color:#5c5149;font-size:13px;}
+.mobile-menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:4px;background:#fffaf4;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:6px;z-index:80;}
+.mobile-menu-toggle span{width:23px;height:2px;background:var(--brown);transition:.25s ease;}
+.mobile-menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.mobile-menu-toggle.open span:nth-child(2){opacity:0;}
+.mobile-menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.mobile-nav{display:none;}
+@media(max-width:1050px){
+    .nav{display:none;}
+    .mobile-menu-toggle{display:flex;}
+    .header{position:sticky;}
+    .header>.quote-btn{display:none;}
+    .mobile-nav{display:none;position:absolute;top:108px;left:0;right:0;background:rgba(250,246,240,.98);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 7.5% 22px;box-shadow:0 18px 40px rgba(48,39,32,.08);z-index:70;}
+    .mobile-nav.open{display:grid;gap:8px;}
+    .mobile-nav a{display:block;padding:13px 0;border-bottom:1px solid rgba(228,216,203,.75);text-transform:uppercase;font-size:12px;letter-spacing:.8px;font-weight:700;color:#4e463f;}
+    .mobile-nav a:last-child{border-bottom:0;}
+    .mobile-nav a.active,.mobile-nav a:hover{color:var(--taupe-dark);}
+    .faq-hero{grid-template-columns:1fr;background:linear-gradient(90deg,rgba(249,244,237,.96),rgba(249,244,237,.55)),url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1800&auto=format&fit=crop") center/cover no-repeat;}
+    .faq-layout{grid-template-columns:1fr;}
+    .faq-sidebar{position:static;}
+}
+@media(max-width:700px){
+    .header{height:auto;gap:18px;flex-direction:column;padding:22px 6%;}
+    .logo{font-size:36px;letter-spacing:4px;}
+    .logo span{letter-spacing:2.5px;}
+    .mobile-nav{top:92px;padding-left:6%;padding-right:6%;}
+    .faq-hero{min-height:590px;}
+    .hero-copy{padding:70px 6%;}
+    .faq-hero h1{font-size:52px;}
+    .faq-section{padding-left:6%;padding-right:6%;}
+    .section-title h2{font-size:42px;}
+    .faq-group-title{font-size:36px;}
+    .faq-item summary{font-size:25px;padding:22px;}
+    .faq-item p{padding:0 22px 24px;}
+    .final-cta,.footer{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+<header class="header">
+    <a href="index.html" class="logo">CLAYBOURNE<span>HOME RENOVATIONS</span></a>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a class="active" href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="quote-btn">Free Estimate</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a class="active" href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<section class="faq-hero">
+    <div class="hero-copy">
+        <div class="eyebrow">Frequently Asked Questions</div>
+        <h1>Clear answers before you start <em>planning the work.</em></h1>
+        <p>Renovations come with practical questions about estimates, permits, cleanup, scheduling, payment, and how life at home changes while work is happening.</p>
+        <div><a href="contact.html" class="quote-btn">Ask Your Question</a></div>
+    </div>
+</section>
+<main class="faq-section">
+    <div class="section-title">
+        <div class="eyebrow">Homeowner Guidance</div>
+        <h2>Questions people often have before contacting a renovator.</h2>
+        <p>The blog covers deeper planning topics like kitchen costs, bathroom ideas, timelines, budgeting, and contractor selection. This page focuses on practical details homeowners often wonder about before booking an estimate.</p>
+    </div>
+    <div class="faq-layout">
+        <aside class="faq-sidebar">
+            <h3>Still unsure where to begin?</h3>
+            <p>You do not need perfect plans before reaching out. A short conversation about the space, the goal, and your concerns is enough to start shaping the next step.</p>
+            <a href="contact.html" class="outline-btn">Contact Claybourne</a>
+        </aside>
+        <div>
+            <section class="faq-group">
+                <h2 class="faq-group-title">Getting Started</h2>
+                <details class="faq-item"><summary>Do you offer free estimates?</summary><p>Yes. Claybourne offers free estimates so homeowners can understand the possible scope, next steps, and general direction of the project before making a decision. The more detail you can share about the space, your goals, and any budget comfort zone, the more useful that first conversation will be.</p></details>
+                <details class="faq-item"><summary>Do I need drawings or a finished design before I contact you?</summary><p>No. Many homeowners reach out when they only know that a room is not working for them anymore. Inspiration photos, rough measurements, or a simple list of what you want to improve can help, but they are not required.</p></details>
+                <details class="faq-item"><summary>What information should I include when requesting an estimate?</summary><p>It helps to include the room or area you want renovated, what you want changed, any known issues, your preferred timeline, and whether you have a budget range in mind. Photos are also helpful because they give context before an in-person conversation or walkthrough.</p></details>
+                <details class="faq-item"><summary>Do you handle small projects, or only larger renovations?</summary><p>Claybourne can help with a range of work, from smaller handyman-style improvements to room refreshes and full remodels. If a project is not the right fit, we would rather be honest early than force the wrong solution.</p></details>
+            </section>
+            <section class="faq-group">
+                <h2 class="faq-group-title">Process And Communication</h2>
+                <details class="faq-item"><summary>Who will I communicate with during the project?</summary><p>Clear communication is part of the renovation experience. Before work begins, you should know who your main point of contact is and how updates will be handled. The goal is to keep decisions organized and prevent homeowners from feeling like they have to chase answers.</p></details>
+                <details class="faq-item"><summary>What happens if I want to change something after work starts?</summary><p>Changes can happen during renovations, especially once a homeowner sees the space taking shape. The important thing is that changes are discussed before extra work is completed. Any change that affects cost, timing, or materials should be made clear so there are no surprises.</p></details>
+                <details class="faq-item"><summary>Will I know what is happening each week?</summary><p>That is the goal. Renovations feel less stressful when homeowners understand what stage the project is in, what decisions are coming up, and whether anything unexpected has appeared. Some weeks may look more dramatic than others, but communication helps the process feel steady.</p></details>
+                <details class="faq-item"><summary>How are unexpected issues handled?</summary><p>Existing homes can reveal surprises such as old wiring, uneven surfaces, water damage, poor previous repairs, or hidden plumbing concerns. If something unexpected comes up, it should be explained clearly, along with why it matters and what options are available before moving forward.</p></details>
+            </section>
+            <section class="faq-group">
+                <h2 class="faq-group-title">Permits, Payments And Paperwork</h2>
+                <details class="faq-item"><summary>Will my renovation need a permit?</summary><p>Some projects may require permits, especially when work involves structure, plumbing, electrical, layout changes, or certain basement and bathroom updates. Smaller cosmetic work may not. Permit needs depend on the scope and local requirements, so this should be discussed during planning.</p></details>
+                <details class="faq-item"><summary>How does payment usually work?</summary><p>Payment structure depends on the size and type of project. Larger renovations are usually handled in stages rather than one full payment upfront. The payment schedule should be clear before work begins so the homeowner understands when payments are due and what each stage represents.</p></details>
+                <details class="faq-item"><summary>Should everything be put in writing?</summary><p>Yes. Written details protect both the homeowner and the contractor. Scope, pricing, payment timing, materials, responsibilities, and important expectations should be clear so everyone is working from the same understanding.</p></details>
+                <details class="faq-item"><summary>Can I buy my own materials?</summary><p>Sometimes, but it should be discussed first. Homeowner-supplied materials can affect scheduling, quality, warranty, fit, and installation. If you already have fixtures, tile, flooring, or other products in mind, mention that early so the project can be planned around the actual materials.</p></details>
+            </section>
+            <section class="faq-group">
+                <h2 class="faq-group-title">Living Through The Work</h2>
+                <details class="faq-item"><summary>Can I stay in my home during the renovation?</summary><p>In many cases, yes, but it depends on the project. A bathroom renovation, kitchen remodel, or basement finishing project may affect daily routines differently. Before work begins, it is helpful to talk through access, noise, dust, working areas, and whether any rooms will be temporarily unavailable.</p></details>
+                <details class="faq-item"><summary>How do you handle dust and cleanup?</summary><p>Renovation work can create dust and disruption, but the job should still be treated with care. Planning for protection, work zones, cleanup habits, and end-of-day expectations helps keep the home more manageable during the project.</p></details>
+                <details class="faq-item"><summary>What should I move before work begins?</summary><p>Homeowners should remove personal items, fragile belongings, small furniture, and anything valuable from the work area before the start date. For kitchens, that may mean clearing cabinets and counters. For bathrooms, it may mean emptying vanities, shelves, and nearby storage.</p></details>
+                <details class="faq-item"><summary>What about pets, children, and daily routines?</summary><p>It is best to plan ahead for pets, children, and anyone working or studying from home. Renovations can involve noise, open doors, tools, dust, and materials. A simple plan for safe access and quiet areas makes the process easier for everyone in the home.</p></details>
+            </section>
+        </div>
+    </div>
+</main>
+<section class="final-cta">
+    <div><h2>Have a question that is not listed?</h2><p>Reach out and tell us what you are thinking about. We are happy to help you understand whether your renovation idea is ready for an estimate.</p></div>
+    <a href="contact.html" class="quote-btn">Ask Claybourne</a>
+</section>
+<footer class="footer"><div class="logo">CLAYBOURNE<span>HOME RENOVATIONS</span></div><div>© 2026 Claybourne Home Renovations. All Rights Reserved.</div></footer>
+<script>
+const mobileMenuToggle=document.querySelector('.mobile-menu-toggle');
+const mobileNav=document.querySelector('.mobile-nav');
+if(mobileMenuToggle&&mobileNav){mobileMenuToggle.addEventListener('click',()=>{const isOpen=mobileNav.classList.toggle('open');mobileMenuToggle.classList.toggle('open',isOpen);mobileMenuToggle.setAttribute('aria-expanded',isOpen?'true':'false');});mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('open');mobileMenuToggle.classList.remove('open');mobileMenuToggle.setAttribute('aria-expanded','false');});});}
+</script>
+</body>
+</html>
