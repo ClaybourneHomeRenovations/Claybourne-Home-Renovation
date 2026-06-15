@@ -43,6 +43,18 @@ a{
     color:inherit;
 }
 
+.maintenance-banner{
+    width:100%;
+    padding:12px 7.5%;
+    background:#302720;
+    color:#fffaf4;
+    text-align:center;
+    font-size:14px;
+    line-height:1.45;
+    font-weight:600;
+    letter-spacing:.2px;
+}
+
 .header{
     height:108px;
     padding:0 7.5%;
@@ -461,6 +473,11 @@ a{
 }
 
 @media(max-width:700px){
+    .maintenance-banner{
+        padding:11px 6%;
+        font-size:13px;
+    }
+
     .header{
         height:auto;
         gap:18px;
@@ -581,6 +598,10 @@ a{
 </head>
 
 <body>
+
+<div class="maintenance-banner" role="status">
+    This website is currently undergoing maintenance. We apologize for any inconvenience.
+</div>
 
 <header class="header">
     <a href="index.html" class="logo">CLAYBOURNE<span>HOME RENOVATIONS</span></a>
