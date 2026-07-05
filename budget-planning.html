@@ -41,26 +41,6 @@ img{
     width:100%;
     display:block;
 }
-
-.maintenance-banner{
-    width:100%;
-    padding:12px 7.5%;
-    background:#302720;
-    color:#fffaf4;
-    text-align:center;
-    font-size:14px;
-    line-height:1.45;
-    font-weight:600;
-    letter-spacing:.2px;
-}
-
-@media(max-width:700px){
-    .maintenance-banner{
-        padding:11px 6%;
-        font-size:13px;
-    }
-}
-
 .header{
     height:108px;
     padding:0 7.5%;
@@ -381,8 +361,7 @@ img{
     }
 }
 
-@media(max-width:700px){
-    .header{
+@media(max-width:700px){.header{
         height:auto;
         gap:18px;
         flex-direction:column;
@@ -446,8 +425,7 @@ img{
 .mobile-nav{display:none;}
 
 @media(max-width:1050px){
-    .mobile-menu-toggle{display:flex;}
-    .header{position:sticky;}
+    .mobile-menu-toggle{display:flex;}.header{position:sticky;}
     .header > .quote-btn{display:none;}
     .mobile-nav{
         display:none;
@@ -490,14 +468,7 @@ img{
 </style>
 </head>
 
-<body>
-
-
-<div class="maintenance-banner" role="status">
-    This website is currently undergoing maintenance. We apologize for any inconvenience.
-</div>
-
-<header class="header">
+<body><header class="header">
     <a href="index.html" class="logo">
         CLAYBOURNE
         <span>HOME RENOVATIONS</span>
